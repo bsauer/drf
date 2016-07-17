@@ -12,4 +12,6 @@ class Wrestler(models.Model):
     name = models.CharField(max_length=50)
     promotion = models.ForeignKey(Promotion)
 
-
+class PromotionStat(models.Model):
+    count = models.IntegerField(default=0)
+    promotion = models.ForeignKey(Promotion)
